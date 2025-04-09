@@ -6,8 +6,10 @@ while play == 1:
     aleatorio = random.randint(1, 3)
     # print("numero aleatorio", aleatorio)
     accion = int(input("(1) piedra, (2) papel, (3) tijeras: "))
+    print("accion", accion)
 
-    if accion != 1 or accion != 2 or accion != 3:
+    # if accion != 1 and accion != 2 and accion != 3:
+    if accion not in [1, 2, 3]:
         print("seleccione una opcion valida")
     elif accion == aleatorio:
         print("empate, ambos sacaron lo mismo")
@@ -23,5 +25,7 @@ while play == 1:
         print("la maquina saco tijeras, y te gano")
 
     play = int(
-        input("si desea jugar de nuevo digite (1), para salir cualquier otra letra: ")
+        input(
+            "si desea jugar de nuevo digite (1), para salir cualquier otro caracter: "
+        )
     )
